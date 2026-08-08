@@ -1,6 +1,6 @@
 # JS & Python Backend Reference Project
 
-[![CI](https://github.com/your-username/js-py-backend/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/js-py-backend/actions/workflows/ci.yml)
+[![CI](https://github.com/blockexception/WeatherRadar/actions/workflows/ci.yml/badge.svg)](https://github.com/blockexception/weatherradar/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org)
 [![Node.js](https://img.shields.io/badge/node-18%2B-green)](https://nodejs.org)
 [![License](https://img.shields.io/badge/license-MIT-yellow)](https://opensource.org/licenses/MIT)
