@@ -1,0 +1,67 @@
+openapi: 3.0.3
+info:
+  title: JS & Python Weather Backend API
+  version: 1.0.0
+  description: Reference API for resolving a location and retrieving the daily average temperature.
+servers:
+  - url: http://localhost:3000
+  - url: http://localhost:3001
+paths:
+  /api/health:
+    get:
+      summary: Health check
+      operationId: getHealth
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  service:
+                    type: string
+  /api/weather:
+    get:
+      summary: Get weather for a location
+      operationId: getWeather
+      parameters:
+        - name: location
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Name of the location to resolve
+      responses:
+        '200':
+          description: Weather payload
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  location:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      country:
+                        type: string
+                      latitude:
+                        type: number
+                      longitude:
+                        type: number
+                  weather:
+                    type: object
+                    properties:
+                      average_temperature_c:
+                        type: number
+                        nullable: true
+                      source:
+                        type: string
+        '400':
+          description: Missing location query parameter
+        '404':
+          description: Location could not be resolved

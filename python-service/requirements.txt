@@ -1,0 +1,2 @@
+# Runtime dependencies for the Python service
+pytest
